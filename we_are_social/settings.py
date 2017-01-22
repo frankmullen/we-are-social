@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'products',
     'paypal.standard.ipn',
     'magazines',
+    'reusable_blog',
+    'disqus',
 ]
 
 AUTH_USER_MODEL = 'accounts.User'
@@ -140,3 +142,7 @@ STATIC_URL = '/static/'
 SITE_URL = 'http://127.0.0.1:8000'
 PAYPAL_NOTIFY_URL = 'http://cd4e1676.ngrok.io/a-very-hard-to-guess-url/'
 PAYPAL_RECEIVER_EMAIL = 'frankmullen-facilitator-1@gmail.com'
+
+# Path to Images
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
