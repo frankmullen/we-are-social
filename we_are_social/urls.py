@@ -23,7 +23,7 @@ from paypal_store import views as paypal_views
 from products import views as product_views
 from magazines import views as magazine_views
 from django.views.static import serve
-from .settings import MEDIA_ROOT
+from settings.dev import MEDIA_ROOT
 from threads import views as forum_views
 
 urlpatterns = [
