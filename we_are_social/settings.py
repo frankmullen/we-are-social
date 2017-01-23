@@ -48,6 +48,11 @@ INSTALLED_APPS = [
     'magazines',
     'reusable_blog',
     'disqus',
+    'debug_toolbar',
+    'tinymce',
+    'emoticons',
+    'threads',
+    'polls',
 ]
 
 AUTH_USER_MODEL = 'accounts.User'
@@ -65,6 +70,7 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware'
 ]
 
 ROOT_URLCONF = 'we_are_social.urls'
@@ -137,6 +143,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = ''
 
 # PayPal Settings
 SITE_URL = 'http://127.0.0.1:8000'
@@ -146,3 +153,6 @@ PAYPAL_RECEIVER_EMAIL = 'frankmullen-facilitator-1@gmail.com'
 # Path to Images
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+# tinymce settings
+TINYMCE_JS_ROOT = os.path.join(BASE_DIR, "static", 'js', 'tinymce', 'tinymce.min.js')
